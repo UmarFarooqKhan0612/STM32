@@ -1,0 +1,75 @@
+STM32 DEVELOPMENT BOARDS HIERARCHY
+==================================
+
+1. NUCLEO BOARDS
+----------------
+Nucleo-32 (LQFP32 MCUs)
+  - NUCLEO-F031K6    -> STM32F031K6 (Cortex-M0)
+  - NUCLEO-L031K6    -> STM32L031K6 (Cortex-M0+)
+  - NUCLEO-L053R8    -> STM32L053R8 (Cortex-M0+)
+  - NUCLEO-G431KB    -> STM32G431KB (Cortex-M4F)
+
+Nucleo-64 (LQFP64 MCUs)
+  - NUCLEO-F030R8    -> STM32F030R8 (Cortex-M0)
+  - NUCLEO-F070RB    -> STM32F070RB (Cortex-M0)
+  - NUCLEO-F072RB    -> STM32F072RB (Cortex-M0)
+  - NUCLEO-F091RC    -> STM32F091RC (Cortex-M0)
+  - NUCLEO-F103RB    -> STM32F103RB (Cortex-M3)
+  - NUCLEO-F302R8    -> STM32F302R8 (Cortex-M4)
+  - NUCLEO-F303RE    -> STM32F303RE (Cortex-M4)
+  - NUCLEO-F334R8    -> STM32F334R8 (Cortex-M4)
+  - NUCLEO-F401RE    -> STM32F401RE (Cortex-M4F)
+  - NUCLEO-F410RB    -> STM32F410RB (Cortex-M4)
+  - NUCLEO-F411RE    -> STM32F411RE (Cortex-M4)
+  - NUCLEO-F446RE    -> STM32F446RE (Cortex-M4)
+  - NUCLEO-L010RB    -> STM32L010RB (Cortex-M0+)
+  - NUCLEO-L073RZ    -> STM32L073RZ (Cortex-M0+)
+  - NUCLEO-L152RE    -> STM32L152RE (Cortex-M3)
+  - NUCLEO-L452RE    -> STM32L452RE (Cortex-M4F)
+  - NUCLEO-L476RG    -> STM32L476RG (Cortex-M4F)
+
+Nucleo-144 (LQFP144 MCUs)
+  - NUCLEO-F429ZI    -> STM32F429ZI (Cortex-M4F)
+  - NUCLEO-F746ZG    -> STM32F746ZG (Cortex-M7)
+  - NUCLEO-F767ZI    -> STM32F767ZI (Cortex-M7)
+  - NUCLEO-H743ZI    -> STM32H743ZI (Cortex-M7)
+  - NUCLEO-U575ZI    -> STM32U575ZI (Cortex-M33, ULP)
+  - NUCLEO-WL55JC    -> STM32WL55   (Cortex-M4 + LoRa radio)
+
+
+2. DISCOVERY BOARDS (DISCO)
+---------------------------
+  - STM32F0 Discovery         -> STM32F051R8 (Cortex-M0)
+  - STM32F3 Discovery         -> STM32F303VC (Cortex-M4F)
+  - STM32F4 Discovery         -> STM32F407VG (Cortex-M4F)
+  - STM32F429I-DISCO          -> STM32F429ZI (Cortex-M4F + LCD)
+  - STM32F769I-DISCO          -> STM32F769NI (Cortex-M7 + LCD/Ethernet)
+  - STM32L4 IoT Node (B-L475E-IOT01A) -> STM32L475VG (Cortex-M4F + Wi-Fi + BLE)
+  - STM32H747I-DISCO          -> STM32H747XI (Dual-core Cortex-M7 + M4)
+  - STM32WB55 Discovery       -> STM32WB55   (Cortex-M4 + BLE/802.15.4)
+
+
+3. EVALUATION BOARDS (EVAL)
+---------------------------
+  - STM3210E-EVAL   -> STM32F103ZE (Cortex-M3)
+  - STM3240G-EVAL   -> STM32F407IG (Cortex-M4F)
+  - STM32F769I-EVAL -> STM32F769NI (Cortex-M7)
+  - STM32H743I-EVAL -> STM32H743II (Cortex-M7)
+  - STM32L152D-EVAL -> STM32L152ZD (Cortex-M3)
+  - STM32MP157A-EVAL-> STM32MP157A (Cortex-A7 + M4, MPU class)
+
+
+4. IOT & WIRELESS BOARDS
+------------------------
+  - B-L475E-IOT01A  -> STM32L475VG (IoT node, Wi-Fi + BLE + sensors)
+  - B-WB1M-WB55     -> STM32WB55   (BLE/802.15.4 wireless MCU)
+  - NUCLEO-WL55JC   -> STM32WL55   (LoRa sub-GHz radio)
+  - P-NUCLEO-LRWAN3 -> STM32L073 + LoRa module
+  - B-U585I-IOT02A  -> STM32U585   (Cortex-M33, secure IoT)
+
+
+5. HIGH PERFORMANCE & MPU BOARDS
+--------------------------------
+  - STM32H7 Nucleo/Discovery/Eval   -> STM32H743, H747, H753 (Cortex-M7)
+  - STM32MP1 Discovery (DK2)        -> STM32MP157C (Cortex-A7 dual + M4)
+  - STM32MP1 Eval (EVAL kits)       -> STM32MP157A/EVAL, MP157C/EVAL
