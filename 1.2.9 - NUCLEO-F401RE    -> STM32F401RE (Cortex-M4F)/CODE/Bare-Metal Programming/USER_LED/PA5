@@ -1,0 +1,36 @@
+/*What each instruction accomplishes (super-short bullets)
+ * 	PERIPH_BASE: tells the CPU where the entire peripheral address space begins (0x40000000).
+ * 	AHB1_OFFSET: where the AHB1 peripheral block starts relative to PERIPH_BASE.
+ * 	AHB1_BASE: the computed base for AHB1 peripherals (0x40020000).
+ * 	GPIOA_OFFSET: GPIOA’s offset inside AHB1.
+ * 	GPIOA_BASE: computed base of GPIOA (0x40020000).
+ * 	RCC_OFFSET: RCC’s offset inside AHB1.
+ * 	RCC_BASE: computed base of RCC (0x40023800).
+ * 	RCC_AHB1EN_R_OFFSET: offset of RCC_AHB1ENR inside RCC.
+ * 	RCC_AHB1EN_R: lvalue to directly read/write RCC_AHB1ENR at 0x40023830.
+ * 	GPIOA_EN: bit mask for GPIOA clock enable (bit0).
+ * 	MODE_R_OFFSET: offset of GPIOx_MODER inside a GPIO port.
+ * 	GPIOA_MODE_R: lvalue to access GPIOA_MODER at 0x40020000.
+ * 	OUTPUT_DR_OFFSET: offset of GPIOx_ODR.
+ * 	GPIOA_OUTPUT_DR_R: lvalue to access GPIOA_ODR at 0x40020014.
+ * 	PIN5/LED_PIN: bit for PA5.
+ *
+ * In main():
+ * 	RCC_AHB1EN_R |= GPIOA_EN; enables the GPIOA peripheral clock.
+ * 	GPIOA_MODE_R writes set MODER5=01 (PA5 as output).
+ * 	Loop toggles PA5 by XORing ODR bit5; delay loop slows the blink.
+ *
+ *
+ * Quick answers you asked for implicitly
+ * 	Actual addresses after adding base+offsets:
+ * 	AHB1_BASE = 0x40000000 + 0x00020000 = 0x40020000
+ * 	GPIOA_BASE = 0x40020000 + 0x0000 = 0x40020000
+ * 	RCC_BASE = 0x40020000 + 0x3800 = 0x40023800
+ * 	RCC_AHB1EN_R = 0x40023800 + 0x30 = 0x40023830
+ * 	GPIOA_MODE_R = 0x40020000 + 0x00 = 0x40020000
+ * 	GPIOA_OUTPUT_DR_R (ODR) = 0x40020000 + 0x14 = 0x40020014
+ *
+ *
+ * What is GPIO-A mode in this code?
+ * 	MODER5 = 01b → PA5 is configured as general-purpose output.
+ * */
